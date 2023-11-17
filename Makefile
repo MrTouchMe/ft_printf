@@ -6,7 +6,7 @@
 #    By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/04 13:15:05 by dgiurgev          #+#    #+#              #
-#    Updated: 2023/11/04 13:50:27 by dgiurgev         ###   ########.fr        #
+#    Updated: 2023/11/17 21:59:39 by dgiurgev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,11 @@ OBJECTS_BONUS = $(BONUS_SOURCES:.c=.o)
 
 all: $(NAME)
 
+$(Make) -C path/to/libft
+$(CC) $(FLAGS) -c $(OBJECTS) -o $(NAME) -Lpath/to/libft -lft
+
 $(NAME): $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS)
+	cc $(FLAGS) -c $(OBJECTS) $(/libft.a) -o $(NAME)
 
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@

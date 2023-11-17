@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:22:56 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/11/17 21:37:08 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/11/17 21:46:13 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	ft_printf(const char *format, ...)
 	return (va_end(args), return_value);
 }
 
-// int	main(void)
-// {
-// 	ft_printf("Hello %s\n", "World");
-// 	return (0);
-// }
+int	main(void)
+{
+	ft_printf("Hello %s\n", "World");
+	return (0);
+}
