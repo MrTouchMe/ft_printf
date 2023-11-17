@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:22:56 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/11/17 19:08:23 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/11/17 21:37:08 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@ int	ft_printf(const char *format, ...)
 	int		write_value;
 	int		return_value;
 
-	va_start(args, format);
 	return_value = 0;
+	va_start(args, format);
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
 			if (*format == '%')
-				write_value = ft_putchar('%');
+				write_value = ft_putchar_fd('%', 1);
 			else
 				write_value = ft_parse(*format, args);
 		}
@@ -39,3 +39,9 @@ int	ft_printf(const char *format, ...)
 	}
 	return (va_end(args), return_value);
 }
+
+// int	main(void)
+// {
+// 	ft_printf("Hello %s\n", "World");
+// 	return (0);
+// }
