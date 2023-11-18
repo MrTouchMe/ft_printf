@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:22:56 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/11/17 21:46:13 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/11/18 17:38:44 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
-	int		write_value;
-	int		return_value;
+	int		len;
 
-	return_value = 0;
+	len = 0;
 	va_start(args, format);
 	while (*format)
 	{
@@ -26,22 +25,22 @@ int	ft_printf(const char *format, ...)
 		{
 			format++;
 			if (*format == '%')
-				write_value = ft_putchar_fd('%', 1);
+				ft_putchar('%', &len);
 			else
-				write_value = ft_parse(*format, args);
+				ft_parse(*format, args, &len);
 		}
 		else
-			write_value = ft_putchar(*format);
-		if (write_value == -1)
-			return (va_end(args), -1);
-		return_value += write_value;
+			ft_putchar(*format, &len);
+		if (len == -1)
+			break ;
 		format++;
 	}
-	return (va_end(args), return_value);
+	return (va_end(args), len);
 }
 
-int	main(void)
-{
-	ft_printf("Hello %s\n", "World");
-	return (0);
-}
+// int	main(void)
+// {
+
+// 	ft_printf("%p\n", 42);
+// 	return (0);
+// }
