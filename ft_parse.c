@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:00:57 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/11/18 17:46:23 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/11/19 17:49:38 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,12 @@ void	ft_parse(char conversion_specifier, va_list args, int *len)
 		ft_putnbr((long long int)va_arg(args, int), 10, 'x', len);
 	else if (conversion_specifier == 'i')
 		ft_putnbr((long long int)va_arg(args, int), 10, 'x', len);
-	// else if (conversion_specifier == 'u')
-	// 	ft_putnbr_fd(va_arg(args, unsigned int), 1);
+	else if (conversion_specifier == 'u')
+		ft_putnbr((long long int)va_arg(args, unsigned int), 10, 'x', len);
 	else if (conversion_specifier == 'p')
 		ft_putptr((long long int)va_arg(args, size_t), 16, len);
 	else if (conversion_specifier == 'x')
 		ft_putnbr((long long int)va_arg(args, unsigned int), 16, 'x', len);
 	else if (conversion_specifier == 'X')
-		ft_putnbr((long long int)va_arg(args, unsigned int), 16, 'X',  len);
+		ft_putnbr((long long int)va_arg(args, unsigned int), 16, 'X', len);
 }

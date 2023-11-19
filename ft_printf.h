@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:24:52 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/11/18 17:41:49 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/11/19 17:04:51 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <limits.h>
+# include <stdio.h>
 
 int		ft_printf(const char *format, ...);
 void	ft_parse(char conversion_specifier, va_list args, int *len);
