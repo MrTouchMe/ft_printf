@@ -6,7 +6,7 @@
 #    By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/04 13:15:05 by dgiurgev          #+#    #+#              #
-#    Updated: 2023/11/19 16:52:03 by dgiurgev         ###   ########.fr        #
+#    Updated: 2023/11/20 20:38:31 by dgiurgev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ FLAGS = -Wall -Wextra -Werror
 
 NAME = libftprintf.a
 
-SOURCES = ft_printf.c ft_parse.c
+SOURCES = ft_printf.c ft_parse.c ft_functions.c
 
 
 
