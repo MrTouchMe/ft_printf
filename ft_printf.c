@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:22:56 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/11/19 17:47:26 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:15:17 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_printf(const char *format, ...)
 
 // int	main(void)
 // {
-// 	ft_printf("Hello %s\n", "World");
+	// ft_printf("Hello %s\n", "World");
 // 	printf("Hello %s\n", "World");
 // 	printf("\n");
 // 	ft_printf("Hello %d\n", 42);
