@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:22:56 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/11/20 20:15:17 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/12/12 18:37:02 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_printf(const char *format, ...)
 
 // int	main(void)
 // {
-	// ft_printf("Hello %s\n", "World");
+// 	ft_printf("Hello %s\n", "World");
 // 	printf("Hello %s\n", "World");
 // 	printf("\n");
 // 	ft_printf("Hello %d\n", 42);
@@ -66,10 +66,5 @@ int	ft_printf(const char *format, ...)
 // 	printf("\n");
 // 	ft_printf("Hello %%\n");
 // 	printf("Hello %%\n");
-// 	ft_printf(" %p %p ", LONG_MIN, LONG_MAX);
-// 	printf(" %p %p ", LONG_MIN, LONG_MAX);
-// 	printf("\n");
-// 	ft_printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
-// 	printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
 // 	return (0);
 // }

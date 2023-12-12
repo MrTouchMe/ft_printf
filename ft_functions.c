@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 20:37:39 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/11/20 20:38:55 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/12/12 18:51:25 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_putptr(size_t nbr, int base, int *len)
 	ft_putstr("0x", len);
 	if (*len == -1)
 		return ;
-	ft_putnbr_ptr(nbr, base, 'x', len);
+	ft_putnbr_ptr(nbr, base, len);
 }
 
 void	ft_putnbr(long long int nbr, int base, char x, int *len)
@@ -57,6 +57,8 @@ void	ft_putnbr(long long int nbr, int base, char x, int *len)
 	}
 	if (nbr >= base)
 		ft_putnbr(nbr / base, base, x, len);
+	if (*len == -1)
+		return ;
 	if (x == 'X')
 		ft_putchar(hex_b[nbr % base], len);
 	else
@@ -65,24 +67,13 @@ void	ft_putnbr(long long int nbr, int base, char x, int *len)
 		return ;
 }
 
-void	ft_putnbr_ptr(size_t nbr, int base, char x, int *len)
+void	ft_putnbr_ptr(size_t nbr, int base, int *len)
 {
 	const char	*hex = {"0123456789abcdef"};
-	const char	*hex_b = {"0123456789ABCDEF"};
 
-	if (nbr < 0)
-	{
-		ft_putchar('-', len);
-		if (*len == -1)
-			return ;
-		nbr = -nbr;
-	}
 	if (nbr >= base)
-		ft_putnbr(nbr / base, base, x, len);
-	if (x == 'X')
-		ft_putchar(hex_b[nbr % base], len);
-	else
-		ft_putchar(hex[nbr % base], len);
+		ft_putnbr_ptr(nbr / base, base, len);
+	ft_putchar(hex[nbr % base], len);
 	if (*len == -1)
 		return ;
 }
