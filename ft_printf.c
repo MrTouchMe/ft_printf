@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:22:56 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/12/12 18:37:02 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/12/13 13:13:27 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,34 +37,3 @@ int	ft_printf(const char *format, ...)
 	}
 	return (va_end(args), len);
 }
-
-// int	main(void)
-// {
-// 	ft_printf("Hello %s\n", "World");
-// 	printf("Hello %s\n", "World");
-// 	printf("\n");
-// 	ft_printf("Hello %d\n", 42);
-// 	printf("Hello %d\n", 42);
-// 	printf("\n");
-// 	ft_printf("Hello %i\n", 42);
-// 	printf("Hello %i\n", 42);
-// 	printf("\n");
-// 	ft_printf("Hello %u\n", 42);
-// 	printf("Hello %u\n", 42);
-// 	printf("\n");
-// 	ft_printf("Hello %x\n", 42);
-// 	printf("Hello %x\n", 42);
-// 	printf("\n");
-// 	ft_printf("Hello %X\n", 42);
-// 	printf("Hello %X\n", 42);
-// 	printf("\n");
-// 	ft_printf("Hello %c\n", 'c');
-// 	printf("Hello %c\n", 'c');
-// 	printf("\n");
-// 	ft_printf("Hello %p\n", &ft_printf);
-// 	printf("Hello %p\n", &ft_printf);
-// 	printf("\n");
-// 	ft_printf("Hello %%\n");
-// 	printf("Hello %%\n");
-// 	return (0);
-// }
