@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 20:37:39 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/12/13 17:12:31 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/12/13 17:16:01 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,6 @@ void	ft_putnbr(long long int nbr, int base, char x, int *len)
 		ft_putchar(hex_b[nbr % base], len);
 	else
 		ft_putchar(hex[nbr % base], len);
-	if (*len == -1)
-		return ;
 }
 
 void	ft_putnbr_ptr(size_t nbr, int base, int *len)
@@ -74,6 +72,4 @@ void	ft_putnbr_ptr(size_t nbr, int base, int *len)
 	if (nbr >= (size_t)base)
 		ft_putnbr_ptr(nbr / base, base, len);
 	ft_putchar(hex[nbr % base], len);
-	if (*len == -1)
-		return ;
 }

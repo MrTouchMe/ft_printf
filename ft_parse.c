@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:00:57 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/12/12 18:47:39 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/12/13 18:17:47 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ void	ft_parse(char conversion_specifier, va_list args, int *len)
 		ft_putnbr((long long int)va_arg(args, unsigned int), 16, 'x', len);
 	else if (conversion_specifier == 'X')
 		ft_putnbr((long long int)va_arg(args, unsigned int), 16, 'X', len);
-	else
-		*len = -1;
+	else if (conversion_specifier != 'c' || conversion_specifier != 's'
+		|| conversion_specifier != 'd' || conversion_specifier != 'i'
+		|| conversion_specifier != 'u' || conversion_specifier != 'p'
+		|| conversion_specifier != 'x' || conversion_specifier != 'X')
+		ft_putchar(conversion_specifier, len);
 }
