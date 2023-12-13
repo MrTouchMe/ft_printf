@@ -6,12 +6,12 @@
 #    By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/04 13:15:05 by dgiurgev          #+#    #+#              #
-#    Updated: 2023/11/21 21:11:38 by dgiurgev         ###   ########.fr        #
+#    Updated: 2023/12/13 17:12:04 by dgiurgev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 NAME = libftprintf.a
 

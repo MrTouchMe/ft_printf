@@ -6,7 +6,7 @@
 /*   By: dgiurgev <dgiurgev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 20:37:39 by dgiurgev          #+#    #+#             */
-/*   Updated: 2023/12/12 18:51:25 by dgiurgev         ###   ########.fr       */
+/*   Updated: 2023/12/13 17:12:31 by dgiurgev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	ft_putnbr_ptr(size_t nbr, int base, int *len)
 {
 	const char	*hex = {"0123456789abcdef"};
 
-	if (nbr >= base)
+	if (nbr >= (size_t)base)
 		ft_putnbr_ptr(nbr / base, base, len);
 	ft_putchar(hex[nbr % base], len);
 	if (*len == -1)
